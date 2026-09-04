@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Erdo Çelik Kapı">
+  <rect width="32" height="32" rx="5" fill="#801818"/>
+  <path
+    fill="none"
+    stroke="#fff"
+    stroke-width="1.75"
+    stroke-linejoin="round"
+    d="M10 9h12v15H10V9zm6-1v17"
+  />
+  <circle cx="19" cy="16.5" r="1.35" fill="#fff"/>
+</svg>
