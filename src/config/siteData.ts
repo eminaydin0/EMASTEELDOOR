@@ -19,12 +19,12 @@ import {
   sortedVillaKapisiSrcs,
   sortedYanginCikisiSrcs,
 } from './media'
-import projKitchenClosed from '../assets/media/showcase/kapalı.jpeg'
-import projKitchenOpen from '../assets/media/showcase/açık.jpeg'
-import projHotelClosed from '../assets/media/showcase/kapalı2.jpeg'
-import projHotelOpen from '../assets/media/showcase/açık2.jpeg'
-import projVillaClosed from '../assets/media/showcase/kapalı3.jpeg'
-import projVillaOpen from '../assets/media/showcase/açık3.jpeg'
+import projKitchenClosed from '../assets/media/showcase/kapali.jpeg'
+import projKitchenOpen from '../assets/media/showcase/acik.jpeg'
+import projHotelClosed from '../assets/media/showcase/kapali2.jpeg'
+import projHotelOpen from '../assets/media/showcase/acik2.jpeg'
+import projVillaClosed from '../assets/media/showcase/kapali3.jpeg'
+import projVillaOpen from '../assets/media/showcase/acik3.jpeg'
 import siteLogo from '../assets/ema-logo.png'
 
 export const BRAND_NAME = 'Ema Steel Door'
@@ -256,11 +256,11 @@ const VILLA_KAPISI_STEM_TO_TITLE_KEY: Record<string, string> = {
   'villa-kapisi.aslan-basli': 'product.serie.villaKapisi.aslanBasli',
 }
 
-/** `src/assets/media/dis-cephe/*.jpeg` — `d\u0131s-*` dosya adları diskte Türkçe ı ile */
+/** `src/assets/media/dis-cephe/*.jpeg` — dosya adı kökü → i18n anahtarı */
 const DIS_CEPHE_STEM_TO_TITLE_KEY: Record<string, string> = {
   'dis-iklim-tas-yuzey': 'product.serie.disCephe.iklimTasYuzey',
-  'd\u0131s-iklim-sac-kabartma': 'product.serie.disCephe.disIklimSacKabartma',
-  'd\u0131s-iklim-tasyuzey': 'product.serie.disCephe.disIklimTasYuzey',
+  'dis-iklim-sac-kabartma': 'product.serie.disCephe.disIklimSacKabartma',
+  'dis-iklim-tasyuzey': 'product.serie.disCephe.disIklimTasYuzey',
 }
 
 /** İroko-masif ürün sayfası — `iroko` + `pivot` sırayla (çift slot: iroko, pivot, …) */
@@ -293,7 +293,7 @@ const IROKO_PAGE_STEM_TO_TITLE_KEY: Record<string, string> = {
   'pivot-kompakt': 'product.serie.irokoPage.pivotKompakt',
   'pivot-kompozit-yuzey': 'product.serie.irokoPage.pivotKompozitYuzey',
   'pivot-masif': 'product.serie.irokoPage.pivotMasif',
-  'pivot-pvc-yuztan\u0131ma': 'product.serie.irokoPage.pivotPvcYuzTanima',
+  'pivot-pvc-yuztanima': 'product.serie.irokoPage.pivotPvcYuzTanima',
 }
 
 /** Dropdown ürün sayfaları — çelik = pvc; villa = villa-kapisi; iroko-masif = iroko + pivot; diğerleri pivot / iroko / dış cephe (adet sınırı yok) */

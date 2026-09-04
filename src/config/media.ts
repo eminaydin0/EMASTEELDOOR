@@ -5,7 +5,7 @@
  */
 import kapi1 from '../assets/media/doors/erd-20-villa.jpg'
 import kapi2 from '../assets/media/doors/kompozit-canli-villa.jpg'
-import kapi3 from '../assets/media/Adsız tasarım.svg'
+import kapi3 from '../assets/media/unnamed-design.svg'
 import introCarouselImage from '../assets/media/genel/carousel.jpeg'
 import introBannerHero from '../assets/media/pivot/pivot-kompakt.jpeg'
 import introBanner24 from '../assets/media/pivot/pivot-kompozit-yuzey.jpeg'
@@ -25,12 +25,12 @@ import doorShowcasePvcKabartma from '../assets/media/pvc/pvc-kabartma.jpeg'
 import doorShowcasePvcKaplamaProje from '../assets/media/pvc/pvc-kaplama-proje.jpeg'
 import doorShowcaseCamYuzey from '../assets/media/genel/cam-yuzey.jpeg'
 import doorShowcaseDisIklimTasYuzey from '../assets/media/dis-cephe/dis-iklim-tas-yuzey.jpeg'
-import doorShowcaseDisIklimTasyuzey from '../assets/media/dis-cephe/d\u0131s-iklim-tasyuzey.jpeg'
-import referenceDisIklimSacKabartma from '../assets/media/dis-cephe/d\u0131s-iklim-sac-kabartma.jpeg'
-import yanginAcilCikisKapi from '../assets/media/yangın-cikisi/acil-cikis-kapi.jpeg'
-import yanginAcilCikisKapisi from '../assets/media/yangın-cikisi/acil-cikis-kapisi.jpeg'
-import yanginAcilCikisYangin from '../assets/media/yangın-cikisi/acil-cikis-yangin.jpeg'
-import yanginKapisiImg from '../assets/media/yangın-cikisi/yangin-kapisi.jpeg'
+import doorShowcaseDisIklimTasyuzey from '../assets/media/dis-cephe/dis-iklim-tasyuzey.jpeg'
+import referenceDisIklimSacKabartma from '../assets/media/dis-cephe/dis-iklim-sac-kabartma.jpeg'
+import yanginAcilCikisKapi from '../assets/media/yangin-cikisi/acil-cikis-kapi.jpeg'
+import yanginAcilCikisKapisi from '../assets/media/yangin-cikisi/acil-cikis-kapisi.jpeg'
+import yanginAcilCikisYangin from '../assets/media/yangin-cikisi/acil-cikis-yangin.jpeg'
+import yanginKapisiImg from '../assets/media/yangin-cikisi/yangin-kapisi.jpeg'
 
 /** Giriş metni yanı — sağ swiper (üç görsel) */
 export const introCarouselSrcs: string[] = [
@@ -153,8 +153,8 @@ function jpegAssetStemFromSrc(src: string): string {
   return noExt.replace(/-([a-f0-9]{4,12})$/i, '')
 }
 
-/** Tabela / sokak fotoğrafı — ürün vitrininde kullanılmaz (`d\u0131s-cekim.jpeg`) */
-const EXCLUDED_DIS_CEPHE_STEMS = new Set<string>(['d\u0131s-cekim'])
+/** Tabela / sokak fotoğrafı — ürün vitrininde kullanılmaz (`dis-cekim.jpeg`) */
+const EXCLUDED_DIS_CEPHE_STEMS = new Set<string>(['dis-cekim'])
 
 function includeDisCepheAssetSrc(src: string): boolean {
   return !EXCLUDED_DIS_CEPHE_STEMS.has(jpegAssetStemFromSrc(src))
@@ -186,7 +186,7 @@ export const sortedIrokoSrcs: string[] = sortGlobModules(irokoGlob)
 export const sortedDisCepheSrcs: string[] = sortGlobModules(disCepheGlob).filter(includeDisCepheAssetSrc)
 export const sortedPvcSrcs: string[] = sortGlobModules(pvcGlob)
 
-/** Yangın & acil çıkış ürün sayfası — `yangın-cikisi/*.jpeg` (sabit sıra) */
+/** Yangın & acil çıkış ürün sayfası — `yangin-cikisi/*.jpeg` (sabit sıra) */
 export const sortedYanginCikisiSrcs: readonly string[] = [
   yanginAcilCikisKapi,
   yanginAcilCikisKapisi,
