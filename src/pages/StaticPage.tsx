@@ -16,7 +16,6 @@ import { useI18n } from '../i18n/context'
 import {
   ABOUT_PAGE,
   CORPORATE_SECTIONS,
-  LOGO,
   MAP_EMBED_URL,
   MAP_EXTERNAL_URL,
   LEGAL_NAME,
