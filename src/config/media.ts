@@ -183,7 +183,22 @@ const pvcGlob = import.meta.glob<{ default: string }>('../assets/media/pvc/*.jpe
 export const sortedPivotSrcs: string[] = sortGlobModules(pivotGlob)
 export const sortedVillaKapisiSrcs: string[] = sortGlobModules(villaKapisiGlob)
 export const sortedIrokoSrcs: string[] = sortGlobModules(irokoGlob)
-export const sortedDisCepheSrcs: string[] = sortGlobModules(disCepheGlob).filter(includeDisCepheAssetSrc)
+/** Eski `dıs-*` dosya adlarının Türkçe locale sıralaması (çekim hariç) */
+const DIS_CEPHE_STEM_ORDER = [
+  'dis-iklim-sac-kabartma',
+  'dis-iklim-tasyuzey',
+  'dis-iklim-tas-yuzey',
+] as const
+
+export const sortedDisCepheSrcs: string[] = sortGlobModules(disCepheGlob)
+  .filter(includeDisCepheAssetSrc)
+  .sort((a, b) => {
+    const ia = DIS_CEPHE_STEM_ORDER.indexOf(jpegAssetStemFromSrc(a) as (typeof DIS_CEPHE_STEM_ORDER)[number])
+    const ib = DIS_CEPHE_STEM_ORDER.indexOf(jpegAssetStemFromSrc(b) as (typeof DIS_CEPHE_STEM_ORDER)[number])
+    const sa = ia === -1 ? Number.MAX_SAFE_INTEGER : ia
+    const sb = ib === -1 ? Number.MAX_SAFE_INTEGER : ib
+    return sa - sb
+  })
 export const sortedPvcSrcs: string[] = sortGlobModules(pvcGlob)
 
 /** Yangın & acil çıkış ürün sayfası — `yangin-cikisi/*.jpeg` (sabit sıra) */
