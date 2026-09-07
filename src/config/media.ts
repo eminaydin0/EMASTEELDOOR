@@ -10,7 +10,6 @@ import introCarouselImage from '../assets/media/genel/carousel.jpeg'
 import introBannerHero from '../assets/media/pivot/pivot-kompakt.jpeg'
 import introBanner24 from '../assets/media/pivot/pivot-kompozit-yuzey.jpeg'
 import heroBanner21 from '../assets/media/genel/dogal-kaplama.jpeg'
-import heroBanner22 from '../assets/media/genel/erd-20serisikompozitkaplama.jpeg'
 import heroCarouselGenelKapi from '../assets/media/genel/carousel-kapi.jpeg'
 import heroBanner23 from '../assets/media/genel/hakkimizda-foto.jpeg'
 import heroBanner25 from '../assets/media/genel/hakkimizda-foto2.jpeg'
@@ -21,7 +20,6 @@ import introCarouselAslanBasli from '../assets/media/villa-kapisi/villa-kapisi.a
 import introCarouselPivotMasif from '../assets/media/pivot/pivot-masif.jpeg'
 import introCarouselPvcKaplamaVilla from '../assets/media/pvc/pvc-kaplama-villa.jpeg'
 import doorShowcaseTravertino from '../assets/media/villa-kapisi/villa-kapisi-travertino.jpeg'
-import doorShowcasePvcKabartma from '../assets/media/pvc/pvc-kabartma.jpeg'
 import doorShowcasePvcKaplamaProje from '../assets/media/pvc/pvc-kaplama-proje.jpeg'
 import doorShowcaseCamYuzey from '../assets/media/genel/cam-yuzey.jpeg'
 import doorShowcaseDisIklimTasYuzey from '../assets/media/dis-cephe/dis-iklim-tas-yuzey.jpeg'
@@ -213,13 +211,12 @@ export const sortedYanginCikisiSrcs: readonly string[] = [
 export const heroCarouselFeatured = {
   /** Video ile 3|2 düzeninde yan yana */
   besideVideo: heroBanner26,
-  /** İkinci slayt: pivot kompozit yüzey + erd-20 kompozit kaplama + carousel-kapi */
-  rowTriple: [introBanner24, heroBanner22, heroCarouselGenelKapi] as const,
+  /** İkinci slayt: pivot kompozit yüzey + carousel-kapi */
+  rowTriple: [introBanner24, heroCarouselGenelKapi, introBannerHero] as const,
 }
 
 /** Ana sayfa üst carousel — sırayla bu banner’lar (video slaytı + 3’lü satırlar) */
 export const heroCarouselBannerSrcs: readonly string[] = [
-  heroBanner22,
   heroBanner21,
   heroBanner23,
   introBanner24,
@@ -230,11 +227,9 @@ export const heroCarouselBannerSrcs: readonly string[] = [
 
 /** Ana sayfa «Kapı Tasarım Vitrini» — sabit sıra (kürasyon) */
 export const DOOR_SHOWCASE_SRCS: readonly string[] = [
-  heroBanner22,
   heroCarouselVillaLakeBoyali,
   introCarouselAslanBasli,
   doorShowcaseTravertino,
-  doorShowcasePvcKabartma,
   doorShowcasePvcKaplamaProje,
   heroBanner21,
   doorShowcaseCamYuzey,
@@ -245,10 +240,8 @@ export const DOOR_SHOWCASE_SRCS: readonly string[] = [
 
 /** #referanslar — seçili JPEG’ler, klasör sırasından farklı sabit karışık sıra */
 export const REFERENCE_FEED_SRCS: readonly string[] = [
-  doorShowcasePvcKabartma,
   heroCarouselVillaLakeBoyali,
   doorShowcaseDisIklimTasYuzey,
-  heroBanner22,
   doorShowcaseCamYuzey,
   introCarouselAslanBasli,
   referenceDisIklimSacKabartma,
