@@ -2629,7 +2629,8 @@ html[lang='tr'] .ev-technical-item__label {
   position: relative;
   flex: 1 1 0;
   min-width: 0;
-  display: block;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   text-decoration: none;
   color: #fff;
@@ -2642,6 +2643,13 @@ html[lang='tr'] .ev-technical-item__label {
 .ev-door-strip__panel:hover,
 .ev-door-strip__panel:focus-visible {
   flex: 2.35 1 0;
+}
+
+.ev-door-strip__media {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: hidden;
 }
 
 .ev-door-strip__panel img {
@@ -2677,7 +2685,7 @@ html[lang='tr'] .ev-technical-item__label {
 .ev-door-strip__label {
   position: absolute;
   left: 1.05rem;
-  bottom: 4.4rem;
+  bottom: 1.15rem;
   z-index: 2;
   margin: 0;
   writing-mode: vertical-rl;
@@ -2705,7 +2713,7 @@ html[lang='tr'] .ev-technical-item__label {
   position: absolute;
   left: 4.4rem;
   right: 1.25rem;
-  bottom: 3.6rem;
+  bottom: 1.15rem;
   z-index: 2;
   max-width: 16.5rem;
   opacity: 0;
@@ -2745,18 +2753,24 @@ html[lang='tr'] .ev-technical-item__label {
 }
 
 .ev-door-strip__mark {
-  position: absolute;
-  left: 1.05rem;
-  bottom: 20px;
+  position: relative;
   z-index: 2;
-  pointer-events: none;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+  padding: 0.7rem 0.55rem;
+  background: #1c1a17;
+  border-top: 1px solid rgba(196, 163, 90, 0.35);
   font-family: var(--font-display);
-  font-size: 0.72rem;
+  font-size: 0.62rem;
   font-weight: 600;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.2em;
   text-transform: lowercase;
-  color: rgba(255, 255, 255, 0.92);
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
+  color: #c4a35a;
+  pointer-events: none;
 }
 
 .ev-door-strip__panel:focus-visible {
@@ -2774,11 +2788,6 @@ html[dir='rtl'] .ev-door-strip__label {
 html[dir='rtl'] .ev-door-strip__copy {
   left: 1.25rem;
   right: 4.4rem;
-}
-
-html[dir='rtl'] .ev-door-strip__mark {
-  left: auto;
-  right: 1.05rem;
 }
 
 @media (max-width: 860px) {
@@ -2813,15 +2822,14 @@ html[dir='rtl'] .ev-door-strip__mark {
   .ev-door-strip__copy {
     left: 1.1rem;
     right: 1.1rem;
-    bottom: 3.4rem;
+    bottom: 1.1rem;
     max-width: none;
     opacity: 1;
     transform: none;
   }
 
   html[dir='rtl'] .ev-door-strip__label,
-  html[dir='rtl'] .ev-door-strip__copy,
-  html[dir='rtl'] .ev-door-strip__mark {
+  html[dir='rtl'] .ev-door-strip__copy {
     left: 1.1rem;
     right: 1.1rem;
   }
@@ -4225,14 +4233,14 @@ html[dir='rtl'] .ema-ticker__track {
 .ema-studio__media {
   position: relative;
   height: clamp(240px, 34vw, 380px);
-  background: #1c1a18;
+  background: #ebe4d8;
   overflow: hidden;
 }
 
 .ema-studio__media > img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
   display: block;
 }
@@ -4264,7 +4272,7 @@ html[dir='rtl'] .ema-ticker__track {
 .ema-studio__swiper img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
   display: block;
 }
@@ -4377,13 +4385,14 @@ html[dir='rtl'] .ema-ticker__track {
 .ema-make__shot {
   height: clamp(240px, 34vw, 380px);
   overflow: hidden;
-  background: #1c1a18;
+  background: #ebe4d8;
 }
 
 .ema-make__shot img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
   display: block;
 }
 
@@ -4433,7 +4442,7 @@ html[dir='rtl'] .ema-ticker__track {
   position: relative;
   height: clamp(260px, 38vw, 420px);
   overflow: hidden;
-  background: #1c1a18;
+  background: #ebe4d8;
 }
 
 .ema-field__media img {
@@ -4441,7 +4450,8 @@ html[dir='rtl'] .ema-ticker__track {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
   display: block;
 }
 

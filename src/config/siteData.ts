@@ -83,21 +83,22 @@ export const MAP_EXTERNAL_URL = `https://www.google.com/maps/search/?api=1&query
 
 export const MAP_EMBED_URL = `https://www.google.com/maps?q=${encodeURIComponent(MAP_SEARCH_QUERY)}&output=embed`
 
-/** Cep hattı — WhatsApp ve doğrudan arama (aynı numara) */
+/** Cep hattı — doğrudan arama */
 export const PHONE_MOBILE_TEL = '+905313494639'
 export const PHONE_MOBILE_DISPLAY = '+90 531 349 46 39'
-/** İkinci iletişim hattı */
+/** İkinci hat — WhatsApp */
 export const PHONE_SECONDARY_TEL = '+905355564925'
 export const PHONE_SECONDARY_DISPLAY = '+90 535 556 49 25'
 
 /** Meta / açıklama metinleri için kısa satır */
 export const PHONES_SEO_LINE = `${PHONE_MOBILE_DISPLAY}, ${PHONE_SECONDARY_DISPLAY}`
 const WHATSAPP_PREFILL_TR = 'Merhaba, Ema Steel Door hakkında bilgi almak istiyorum.'
+const WHATSAPP_E164 = PHONE_SECONDARY_TEL.replace(/^\+/, '')
 /** Dil seçimine göre `contact.waPrefill` ile `buildWhatsappChatUrl(t(...))` kullanın */
-export const WHATSAPP_CHAT_URL = `https://wa.me/905313494639?text=${encodeURIComponent(WHATSAPP_PREFILL_TR)}`
+export const WHATSAPP_CHAT_URL = `https://wa.me/${WHATSAPP_E164}?text=${encodeURIComponent(WHATSAPP_PREFILL_TR)}`
 
 export function buildWhatsappChatUrl(prefillMessage: string) {
-  return `https://wa.me/905313494639?text=${encodeURIComponent(prefillMessage)}`
+  return `https://wa.me/${WHATSAPP_E164}?text=${encodeURIComponent(prefillMessage)}`
 }
 
 /** Üst arama kutusu — anahtar kelime → sayfa içi bölüme kaydır */

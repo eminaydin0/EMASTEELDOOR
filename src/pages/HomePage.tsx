@@ -496,17 +496,19 @@ export function HomePage() {
                   role="listitem"
                   aria-label={`${line} — ${t('doors.openCategory')}`}
                 >
-                  <img
-                    src={d.src}
-                    alt=""
-                    loading="lazy"
-                    sizes="(max-width:800px) 100vw, 40vw"
-                  />
-                  <span className="ev-door-strip__shade" aria-hidden="true" />
-                  <span className="ev-door-strip__label">{line}</span>
-                  <span className="ev-door-strip__copy">
-                    <p>{t(`door.blurb${i}`)}</p>
-                    <em>{t('doors.goProduct')}</em>
+                  <span className="ev-door-strip__media">
+                    <img
+                      src={d.src}
+                      alt=""
+                      loading="lazy"
+                      sizes="(max-width:800px) 100vw, 40vw"
+                    />
+                    <span className="ev-door-strip__shade" aria-hidden="true" />
+                    <span className="ev-door-strip__label">{line}</span>
+                    <span className="ev-door-strip__copy">
+                      <p>{t(`door.blurb${i}`)}</p>
+                      <em>{t('doors.goProduct')}</em>
+                    </span>
                   </span>
                   <span className="ev-door-strip__mark" aria-hidden="true">
                     {BRAND_HANDLE}
