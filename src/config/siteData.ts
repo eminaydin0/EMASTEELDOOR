@@ -19,6 +19,7 @@ import {
   sortedVillaKapisiSrcs,
   sortedYanginCikisiSrcs,
 } from './media'
+import doorShowcaseDisIklimTasyuzey from '../assets/media/dis-cephe/dis-iklim-tasyuzey.jpeg'
 import projKitchenClosed from '../assets/media/showcase/kapali.jpeg'
 import projKitchenOpen from '../assets/media/showcase/acik.jpeg'
 import projHotelClosed from '../assets/media/showcase/kapali2.jpeg'
@@ -340,9 +341,13 @@ export function productSeriesCards(dict: ProductDictId): { src: string; titleKey
   })
 }
 
-/** Kapı Sistemlerimiz — her satır `productSeriesSrcsForDict` ile aynı klasörden tek önizleme (kompozit = `dis-cephe`) */
+/** Kapı Sistemlerimiz — her satır `productSeriesSrcsForDict` ile aynı klasörden tek önizleme (kompozit = dış cephe) */
 function doorSystemBannerSrcs(): string[] {
   return PRODUCT_DICT_IDS.map((dict) => {
+    if (dict === 'kompozit') {
+      // Dar şeritte koyu gri kapı kaybolmasın — canlı dış cephe görseli
+      return doorShowcaseDisIklimTasyuzey
+    }
     const imgs = productSeriesSrcsForDict(dict)
     const first = imgs[0]
     if (first) return first
