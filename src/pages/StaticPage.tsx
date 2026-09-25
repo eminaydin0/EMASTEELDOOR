@@ -18,7 +18,6 @@ import {
   CORPORATE_SECTIONS,
   MAP_EMBED_URL,
   MAP_EXTERNAL_URL,
-  LEGAL_NAME,
   OFFICE_STREET_LINE,
   PHONE_MOBILE_DISPLAY,
   PHONE_MOBILE_TEL,
@@ -203,7 +202,6 @@ function ContactPage({ waUrl }: { waUrl: string }) {
           </h1>
           <p className="ev-reach__lead">{t('contact.intro')}</p>
 
-          <p className="ev-reach__firm">{LEGAL_NAME}</p>
           <p className="ev-reach__addr">{OFFICE_STREET_LINE}</p>
 
           <div className="ev-reach__lines">
