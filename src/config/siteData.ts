@@ -73,12 +73,12 @@ export const SITE_URL = 'https://emasteeldoor.com.tr'
 /** Fabrika / ofis (footer ve iletişim sayfası) */
 export const LEGAL_NAME = 'Özyurt Yapı Elemanları Ticaret ve Sanayi A.Ş.'
 export const OFFICE_STREET_LINE =
-  'Kayseri OSB, 16. Cd No:48, 38070 Melikgazi/Kayseri'
+  'Kayseriosb Mah. 16. Cad. Saray Madeni Eşya No:50, Melikgazi/Kayseri'
 export const OFFICE_ADDRESS_LINE = `${LEGAL_NAME}, ${OFFICE_STREET_LINE}`
 
 /** Google Haritalar — tek kaynak sorgu (embed + harici link) */
 const MAP_SEARCH_QUERY =
-  'Özyurt Yapı Elemanları, Kayseri OSB 16. Cadde No:48, 38070 Melikgazi, Kayseri, Turkey'
+  'Kayseriosb Mah. 16. Cad. Saray Madeni Eşya No:50, Melikgazi, Kayseri, Turkey'
 
 export const MAP_EXTERNAL_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(MAP_SEARCH_QUERY)}`
 
